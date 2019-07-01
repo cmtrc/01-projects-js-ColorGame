@@ -13,10 +13,12 @@ body {
 #container {
     margin: 0 auto;
     max-width: 600px;
-    
-   
 }
 
 h1 {
+    color: white;
+}
+
+span {
     color: white;
 }
