@@ -1,12 +1,4 @@
-var colors = [
-    "rgb(255, 0, 0)",
-    "rgb(255, 255, 0)",
-    "rgb(0, 255, 0)",
-    "rgb(0, 255, 255)",
-    "rgb(0, 0, 255)",
-    "rgb(255, 0, 255)"
-];
-
+var colors = generateRngColors(6);
 var pickedColor = pickColor();
 var squares = document.querySelectorAll(".square");
 var colorDisplay = document.getElementById("colorDisplay");
@@ -21,7 +13,6 @@ for (var i = 0; squares.length; i++) {
         if(pickedColor === clickedColor) {     
             msg = "Correct!";
             messageDisp.textContent = "Correct!";
-            // change remainding colors to pickedColor
             changeColors(clickedColor);
             // change headerColor to pickedColor
 
@@ -41,4 +32,22 @@ function changeColors(color) {
 function pickColor() {
    var random = Math.floor(Math.random() * colors.length);
    return colors[random];
+}
+
+function generateRngColors(num) {
+    // make array
+    var arr = [];
+    // add num random colors to arr
+    for(var  i = 0; i < num; i++) {
+        arr[i] = rngColor();
+    }
+    // return that array
+    return arr;
+}
+
+function rngColor() {
+    var r = Math.floor(Math.random() * 256);
+    var g = Math.floor(Math.random() * 256);
+    var b = Math.floor(Math.random() * 256);
+    return "rgb(" + r + ", " + g + ", " + b + ")";
 }
