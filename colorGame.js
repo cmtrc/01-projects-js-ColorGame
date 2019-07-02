@@ -3,6 +3,7 @@ var pickedColor = pickColor();
 var squares = document.querySelectorAll(".square");
 var colorDisplay = document.getElementById("colorDisplay");
 var messageDisp = document.querySelector("#msg");
+var h1 = document.querySelector("h1");
 
 colorDisplay.textContent = pickedColor;
 
@@ -14,8 +15,7 @@ for (var i = 0; squares.length; i++) {
             msg = "Correct!";
             messageDisp.textContent = "Correct!";
             changeColors(clickedColor);
-            // change headerColor to pickedColor
-
+            h1.style.backgroundColor = clickedColor;
         }else {
             this.style.backgroundColor = "#232323";
             messageDisp.textContent = "Try Again";
@@ -35,13 +35,10 @@ function pickColor() {
 }
 
 function generateRngColors(num) {
-    // make array
     var arr = [];
-    // add num random colors to arr
     for(var  i = 0; i < num; i++) {
         arr[i] = rngColor();
     }
-    // return that array
     return arr;
 }
 
