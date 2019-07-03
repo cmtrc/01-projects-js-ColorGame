@@ -4,6 +4,20 @@ var squares = document.querySelectorAll(".square");
 var colorDisplay = document.getElementById("colorDisplay");
 var messageDisp = document.querySelector("#msg");
 var h1 = document.querySelector("h1");
+var resetButton = document.querySelector("#reset");
+
+resetButton.addEventListener("click", function() {    
+    // gen all new colours
+    colors = generateRngColors(6);
+    // pick a new rnd color
+    pickedColor = pickColor();
+    colorDisplay.textContent = pickedColor;
+    // change color of squares
+    for(let i = 0; i < squares.length; i++) {
+        squares[i].style.backgroundColor = colors[i];
+    }
+})
+
 
 colorDisplay.textContent = pickedColor;
 
