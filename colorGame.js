@@ -12,6 +12,16 @@ var hardBtn = document.querySelector("#hardBtn");
 easyBtn.addEventListener("click", function() {
     easyBtn.classList.add("selected");
     hardBtn.classList.remove("selected");
+    colors = generateRngColors(3);
+    pickedColor = pickColor();
+    colorDisplay.textContent = pickedColor;
+    for(let i = 0; i < squares.length; i++) {
+        squares[i].style.backgroundColor = colors[i];
+    }
+    for(let i = 3; i < squares.length; i++) {
+        squares[i].style.backgroundColor = "#232323";
+    }
+
 
 })
 
