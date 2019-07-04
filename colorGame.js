@@ -11,7 +11,7 @@ var numSquares = 6;
 
 
 easyBtn.addEventListener("click", function() {
-    h1.style.backgroundColor = "#232323";
+    h1.style.backgroundColor = "steelblue";
     easyBtn.classList.add("selected");
     hardBtn.classList.remove("selected");
     numSquares = 3;
@@ -29,7 +29,7 @@ easyBtn.addEventListener("click", function() {
 });
 
 hardBtn.addEventListener("click", function() {
-    h1.style.backgroundColor = "#232323";
+    h1.style.backgroundColor = "steelblue";
     hardBtn.classList.add("selected");
     easyBtn.classList.remove("selected");
     numSquares = 6;
@@ -54,7 +54,7 @@ resetButton.addEventListener("click", function() {
     for(let i = 0; i < squares.length; i++) {
         squares[i].style.backgroundColor = colors[i];
     }
-    h1.style.backgroundColor = "#232323";
+    h1.style.backgroundColor = "steelblue";
     messageDisp.textContent ="";
 })
 
@@ -72,7 +72,7 @@ for (var i = 0; squares.length; i++) {
             changeColors(clickedColor);
             h1.style.backgroundColor = clickedColor;
         }else {
-            this.style.backgroundColor = "#232323";
+            this.style.backgroundColor = "steelblue";
             messageDisp.textContent = "Try Again";
         }
     });
