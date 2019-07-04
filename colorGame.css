@@ -1,5 +1,7 @@
 body {
-    background-color: #232323
+    background-color: #232323;
+    margin: 0;
+    font-family: 'source code pro black' ;
 }
 
 .square {
@@ -17,6 +19,13 @@ body {
 
 h1 {
     color: white;
+    text-align: center;
+    background-color: steelblue;
+    margin: 0;
+    font-weight: normal;
+    text-transform: uppercase;
+    line-height: 1.1;
+    padding: 20px 0;
 }
 
 
@@ -29,4 +38,8 @@ h1 {
 
 .selected {
     background-color: blue;
+}
+
+#colorDisplay {
+    font-size: 150%;
 }
