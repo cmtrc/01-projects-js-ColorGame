@@ -46,7 +46,7 @@ hardBtn.addEventListener("click", function() {
 
 resetButton.addEventListener("click", function() {    
     // gen all new colours
-    colors = generateRngColors(6);
+    colors = generateRngColors(numSquares);
     // pick a new rnd color
     pickedColor = pickColor();
     colorDisplay.textContent = pickedColor;
