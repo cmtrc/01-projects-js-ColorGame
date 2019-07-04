@@ -11,6 +11,7 @@ var numSquares = 6;
 
 
 easyBtn.addEventListener("click", function() {
+    h1.style.backgroundColor = "#232323";
     easyBtn.classList.add("selected");
     hardBtn.classList.remove("selected");
     numSquares = 3;
@@ -28,6 +29,7 @@ easyBtn.addEventListener("click", function() {
 });
 
 hardBtn.addEventListener("click", function() {
+    h1.style.backgroundColor = "#232323";
     hardBtn.classList.add("selected");
     easyBtn.classList.remove("selected");
     numSquares = 6;
