@@ -7,12 +7,14 @@ var h1 = document.querySelector("h1");
 var resetButton = document.querySelector("#reset");
 var easyBtn = document.querySelector("#easyBtn");
 var hardBtn = document.querySelector("#hardBtn");
+var numSquares = 6;
 
 
 easyBtn.addEventListener("click", function() {
     easyBtn.classList.add("selected");
     hardBtn.classList.remove("selected");
-    colors = generateRngColors(3);
+    numSquares = 3;
+    colors = generateRngColors(numSquares);
     pickedColor = pickColor();
     colorDisplay.textContent = pickedColor;
     
@@ -28,7 +30,8 @@ easyBtn.addEventListener("click", function() {
 hardBtn.addEventListener("click", function() {
     hardBtn.classList.add("selected");
     easyBtn.classList.remove("selected");
-    colors = generateRngColors(6);
+    numSquares = 6;
+    colors = generateRngColors(numSquares);
     pickedColor = pickColor();
     colorDisplay.textContent = pickedColor;
     
