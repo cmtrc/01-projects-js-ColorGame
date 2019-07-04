@@ -15,19 +15,27 @@ easyBtn.addEventListener("click", function() {
     colors = generateRngColors(3);
     pickedColor = pickColor();
     colorDisplay.textContent = pickedColor;
+    
     for(let i = 0; i < squares.length; i++) {
+        if(colors[i]){
         squares[i].style.backgroundColor = colors[i];
+        }else{
+            squares[i].style.display = "none";
+        }
     }
-    for(let i = 3; i < squares.length; i++) {
-        squares[i].style.backgroundColor = "#232323";
-    }
-
-
-})
+});
 
 hardBtn.addEventListener("click", function() {
     hardBtn.classList.add("selected");
     easyBtn.classList.remove("selected");
+    colors = generateRngColors(6);
+    pickedColor = pickColor();
+    colorDisplay.textContent = pickedColor;
+    
+    for(let i = 0; i < squares.length; i++) {
+        squares[i].style.backgroundColor = colors[i];
+        squares[i].style.display = "block";
+    }
 })
 
 
