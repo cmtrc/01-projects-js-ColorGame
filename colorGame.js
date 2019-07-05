@@ -18,6 +18,7 @@ easyBtn.addEventListener("click", function() {
     colors = generateRngColors(numSquares);
     pickedColor = pickColor();
     colorDisplay.textContent = pickedColor;
+    messageDisp.textContent ="";
     
     for(let i = 0; i < squares.length; i++) {
         if(colors[i]){
@@ -36,6 +37,7 @@ hardBtn.addEventListener("click", function() {
     colors = generateRngColors(numSquares);
     pickedColor = pickColor();
     colorDisplay.textContent = pickedColor;
+    messageDisp.textContent ="";
     
     for(let i = 0; i < squares.length; i++) {
         squares[i].style.backgroundColor = colors[i];
