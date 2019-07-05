@@ -6,11 +6,14 @@ body {
 
 .square {
     width: 30%;
-    background: purple;
+    background: #232323;
     padding-bottom: 30%;
     float: left;
     margin: 1.66%;
     border-radius: 15%;
+    transition: background 800ms;
+    --webkit-transition: background 800ms;
+    --moz-transition: background 800ms;
 }
 
 #container {
@@ -56,6 +59,8 @@ button {
     letter-spacing: 1px;
     font-size: inherit;
     transition: all 800ms;
+    --webkit-transition: background 800ms;
+    --moz-transition: background 800ms;
 }
 button:hover {
     background-color: steelblue;

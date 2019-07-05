@@ -72,7 +72,7 @@ for (var i = 0; squares.length; i++) {
             changeColors(clickedColor);
             h1.style.backgroundColor = clickedColor;
         }else {
-            this.style.backgroundColor = "steelblue";
+            this.style.backgroundColor = "#232323";
             messageDisp.textContent = "Try Again";
         }
     });
