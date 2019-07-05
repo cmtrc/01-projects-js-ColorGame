@@ -54,4 +54,13 @@ button {
     color: steelblue;
     letter-spacing: 1px;
     font-size: inherit;
+    transition: all 800ms;
+}
+button:hover {
+    background-color: steelblue;
+    color: white;
+}
+#msg {
+    display: inline-block;
+    width: 7.4em;
 }
