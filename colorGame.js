@@ -12,13 +12,9 @@ for(var i = 0; i < modeButtons.length; i++){
         modeButtons[0].classList.remove("selected");
         modeButtons[1].classList.remove("selected");
         this.classList.add("selected");
-
         this.textContent === "Easy" ? numSquares = 3 : numSquares = 6;
         reset();
-
-
     });
-
 }
 
 function reset () {
@@ -38,53 +34,8 @@ function reset () {
     resetButton.textContent = "New Colors"
 }
 
-
-// easyBtn.addEventListener("click", function() {
-//     h1.style.backgroundColor = "steelblue";
-//     easyBtn.classList.add("selected");
-//     hardBtn.classList.remove("selected");
-//     numSquares = 3;
-//     colors = generateRngColors(numSquares);
-//     pickedColor = pickColor();
-//     colorDisplay.textContent = pickedColor;
-//     messageDisp.textContent ="";
-    
-//     for(let i = 0; i < squares.length; i++) {
-//         if(colors[i]){
-//         squares[i].style.backgroundColor = colors[i];
-//         }else{
-//             squares[i].style.display = "none";
-//         }
-//     }
-// });
-
-// hardBtn.addEventListener("click", function() {
-//     h1.style.backgroundColor = "steelblue";
-//     hardBtn.classList.add("selected");
-//     easyBtn.classList.remove("selected");
-//     numSquares = 6;
-//     colors = generateRngColors(numSquares);
-//     pickedColor = pickColor();
-//     colorDisplay.textContent = pickedColor;
-//     messageDisp.textContent ="";
-    
-//     for(let i = 0; i < squares.length; i++) {
-//         squares[i].style.backgroundColor = colors[i];
-//         squares[i].style.display = "block";
-//     }
-// })
-
-
 resetButton.addEventListener("click", function() {    
-    colors = generateRngColors(numSquares);
-    pickedColor = pickColor();
-    colorDisplay.textContent = pickedColor;
-    for(let i = 0; i < squares.length; i++) {
-        squares[i].style.backgroundColor = colors[i];
-    }
-    h1.style.backgroundColor = "steelblue";
-    messageDisp.textContent ="";
-    this.textContent = "New Colors"
+    reset();
 })
 
 
