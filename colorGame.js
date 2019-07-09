@@ -67,21 +67,7 @@ resetButton.addEventListener("click", function() {
     reset();
 })
 
-for (var i = 0;i < squares.length; i++) {
-    squares[i].addEventListener("click", function(){
-        var clickedColor = this.style.backgroundColor;
-        if(pickedColor === clickedColor) {     
-            msg = "Correct!";
-            messageDisp.textContent = "Correct!";
-            resetButton.textContent = "Play Again?";
-            changeColors(clickedColor);
-            h1.style.backgroundColor = clickedColor;
-        }else {
-            this.style.backgroundColor = "#232323";
-            messageDisp.textContent = "Try Again";
-        }
-    });
-}
+
 function changeColors(color) {
     for(let i = 0; i < colors.length; i++){
         squares[i].style.backgroundColor = color;
